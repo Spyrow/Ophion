@@ -46,14 +46,8 @@
     <IntDir>$(ProjectDir)build\obj\$(Configuration)\</IntDir>
     <TargetName>Ophion</TargetName>
     <TargetExt>.sys</TargetExt>
-    <SignMode>TestSign</SignMode>
-    <TestCertificate>26F9E348962C59621D11296D690DD6D13E6B93DB</TestCertificate>
+    <SignMode>Off</SignMode>
   </PropertyGroup>
-  <ItemDefinitionGroup>
-    <DriverSign>
-      <FileDigestAlgorithm>SHA256</FileDigestAlgorithm>
-    </DriverSign>
-  </ItemDefinitionGroup>
   <!-- Compiler settings: Release -->
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -68,6 +62,7 @@
       <TreatWarningAsError>false</TreatWarningAsError>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <EnableSpectreMitigation>false</EnableSpectreMitigation>
       <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
@@ -90,6 +85,7 @@
       <TreatWarningAsError>false</TreatWarningAsError>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <EnableSpectreMitigation>false</EnableSpectreMitigation>
       <AdditionalOptions>/FS %(AdditionalOptions)</AdditionalOptions>
     </ClCompile>
     <Link>
