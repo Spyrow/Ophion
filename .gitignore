@@ -16,7 +16,7 @@
 # Mono auto generated files
 mono_crash.*
 
-# Build results
+# Build results - ignore obj/ and logs but keep bin/ for compiled driver
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -27,11 +27,12 @@ x86/
 [Aa][Rr][Mm]/
 [Aa][Rr][Mm]64/
 bld/
-[Bb]in/
 [Oo]bj/
-[Oo]ut/
+[Oo]out/
 [Ll]og/
 [Ll]ogs/
+# Keep compiled driver binary
+!build/bin/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
